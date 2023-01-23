@@ -1,0 +1,24 @@
+{
+  "name": "holamundo",
+  "version": "1.0.0",
+  "description": "primer ejercicio con Node ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node start "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geoguncay/OB-JavaScript.git"
+  },
+  "keywords": [
+    "node",
+    "js"
+  ],
+  "author": "geo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/geoguncay/OB-JavaScript/issues"
+  },
+  "homepage": "https://github.com/geoguncay/OB-JavaScript#readme"
+}
