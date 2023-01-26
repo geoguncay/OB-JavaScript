@@ -145,4 +145,37 @@ for (let items of list_w) {
 }
 
 
+//Strings 
+
+let str = 'Our world throgh the development'
+
+console.log(str.replace('development', 'English'));
+
+//contatenation
+
+let a = 'Hello';
+let b = 'world'
+
+console.log(a.concat(' ', b));
+console.log(a +' '+b);
+console.log(`${a} ${b}`);
+
+//Eliminar espacios al final e inicio de las cadenas
+
+let str_space = '   Our world throgh the development        ';
+
+console.log(`Cadenas en Mayusculas ${str_space.toUpperCase()}`);
+
+console.log(`Cadenas con espacios ${str_space.length}`);
+
+console.log(`Cadena sin espacios al inicio y al final ${str_space.trim().length}`);
+
+console.log(`Cadena sin espacios al inicio ${str_space.trimStart().length}`);
+
+
+//character 
+let ab = 'Hello';
+console.log(ab.charAt(0));
+console.log(ab[0]);
+
 
