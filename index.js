@@ -179,3 +179,53 @@ console.log(ab.charAt(0));
 console.log(ab[0]);
 
 
+//Numbers 
+
+let num_a = 9.0;
+
+let num_b = 2.1;
+
+console.log(num_a.toString()); //Covierte a un String 
+
+let multip = num_a*num_b;
+
+console.log(multip.toFixed(2)); //Numero de decimales
+
+console.log(typeof multip.toFixed(2)); //Conocer el tipo de dato
+
+console.log(multip.toPrecision(3)); //limitar el numero de cifras significativas 
+
+
+
+//Obtener valores numericos 
+let a_num = new Number(5);
+
+console.log(a_num.valueOf());
+
+let b_string = new String('Hello world');
+
+console.log(b_string.valueOf());
+
+//NaN Infinity 
+
+let a_NaN = Number('Hello');
+
+console.log(a_NaN);
+
+console.log(isNaN(a_NaN) );
+
+//Casting Number, Parseint, Parsefloat
+
+let n_cast = '5.2'; //String 
+
+console.log(Number(n_cast)); //Number 
+
+console.log(parseInt(n_cast) ); // int number
+
+// hexadecimal
+
+let n_hex = '0x12x45g7'
+
+console.log(parseInt(n_hex)); //
+
+
