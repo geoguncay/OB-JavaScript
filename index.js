@@ -9,12 +9,12 @@ a = "segunda variable A"; //Se ha utilizado la varible anterior para asginar el 
 console.log(a);
 
 let  _dia, _mes, _anio; // Lad variables let no necesitan ser inicializada y de cerrarce con el punto y coma
-const a = 5; //tiene que ncesesariamete ser inicializada 
+const ax = 5; //tiene que ncesesariamete ser inicializada 
 
-let b = "Variable let"; //este se ejectuta a nivel de bloque de codigo 
-console.log(b);
+let b_ = "Variable let"; //este se ejectuta a nivel de bloque de codigo 
+console.log(b_ );
 
-console.log(typeof b); //conocer el tipo de variable 
+console.log(typeof b_ ); //conocer el tipo de variable 
 
 
 /////////////////////////////////
@@ -25,7 +25,7 @@ console.log(typeof b); //conocer el tipo de variable
 
 // () funciones 
 
-//{} llaves para obejotos, funciones y estructuras de control 
+//{} llaves para objetos, funciones y estructuras de control 
 
 //listas 
 
@@ -73,9 +73,9 @@ dia_ = ahora.getDate();
 console.log(dia, mes, anio, dia_);
 
 
-let a = 5;
-let b = 10;
-if (a > b) {
+let ay = 5; 
+let _b = 10;
+if (ay > _b) {
   console.log("A es mayor que B");
 } else {
   console.log("B es mayor a A");
@@ -153,11 +153,11 @@ console.log(str.replace('development', 'English'));
 
 //contatenation
 
-let a = 'Hello';
+let ah = 'Hello';
 let b = 'world'
 
 console.log(a.concat(' ', b));
-console.log(a +' '+b);
+console.log(ah +' '+b);
 console.log(`${a} ${b}`);
 
 //Eliminar espacios al final e inicio de las cadenas
@@ -229,3 +229,141 @@ let n_hex = '0x12x45g7'
 console.log(parseInt(n_hex)); //
 
 
+
+//Arrays 
+
+let arr = ['a', 1, {2: 'A',}, 5, 'x'];
+
+console.log(arr[1]); // acceder al arrglo con el indice 
+
+arr.push('c', '2'); //agregar valores al final del arreglo 
+console.log(arr); 
+
+arr.unshift('2', 'c'); //agregar valores al final del arreglo
+console.log(arr); 
+
+arr.pop(); //remove the last element 
+
+console.log(arr); 
+
+arr.shift() //remove the first element 
+
+console.log(arr); 
+
+let arr_a = [1,2,3]
+let arr_b = [4,5,6]
+
+console.log(arr_a.concat(arr_b));
+
+let arr_c = [...arr_a, ...arr_b] ; //Unir con factor de propagacion 
+
+console.log(arr_c); 
+
+let arr_d = [arr_a, arr_b] //No es un factor de propagacion 
+
+console.log(arr_d); 
+
+let arr_slice = arr_c.slice(2, -2) //Obter una porcion de la lista 
+
+console.log(arr_slice); 
+
+
+//Iterar listas 
+let arr_it= [1,2,3,4,5,6,7,8,9]
+
+for(let i = 0; i<=arr_it.length -1; i ++){
+  console.log(arr_it[i]);
+}
+
+arr_it.forEach(value =>{
+  console.log(`arreglo for forEach ${value}`);
+})
+
+
+//Metodo .find()
+const listObj = [
+  {name: 'Juan', edad: 20},
+  {name: 'Pedro', edad: 25},
+  {name: 'Maria', edad: 28},
+  {name: 'Nancy', edad: 25}
+]
+
+// const x = listObj.find(item =>{
+//   return item.edad ==25
+// })
+
+// console.log(x);
+
+const x = listObj.find(item => item.edad == 25)
+
+console.log(x.name);
+
+//Metodo .map() 
+const array = ["Bogota", "Quito", "Sao Pablo", "Buenos Aires", "Mexico DF"]
+
+
+const newArray = array.map((valor, indice) => `${indice + 1} - ${valor}`)
+console.log(newArray)
+
+//Metodo .filter() 
+
+const listaObjetos = [
+  { nombre: "Leire", edad: 35 },
+  { nombre: "Gorka", edad: 34 },
+  { nombre: "Miguel", edad: 28 },
+  { nombre: "Lucía", edad: 3 },
+  { nombre: "Amaia", edad: 29}
+]
+
+const personasMayores = listaObjetos.filter(obj => obj.edad > 30)
+console.log(personasMayores)
+
+const nuevaLista = listaObjetos.filter(obj => obj.nombre != "Miguel") 
+console.log(nuevaLista)
+
+//Metodo .reduce()
+
+const valores = [10, 50, 12, 30, 60, 200]
+
+const suma = valores.reduce((prev, cur, i, arrayOriginal) => {
+    // console.log('Valor Previo: '+prev)
+    // console.log('Valor actual: '+cur)
+    // console.log('Indice:'+i)
+    // console.log(arrayOriginal)
+    return prev + cur
+})
+console.log('Suma: '+suma)
+
+//Metodo .sort() ---Ordenar unicamente numeros 
+
+const arrayNum = [4, 1, 7, 3, 1, 3, 56, 1, 546]
+arrayNum.sort((a, b) => -1) //Invertir el arreglo
+
+arrayNum.sort((a, b) => a-b) //Ordenar ascendente 
+console.log(arrayNum)
+
+
+arrayNum.sort((a, b) => b-a) //Ordenar descendente
+console.log(arrayNum)
+
+
+//Odenar objetos en bases a la edad
+const objLisst = [
+  { nombre: "Juan", edad: 10 },
+  { nombre: "Pedro", edad: 5 },
+  { nombre: "Jose", edad: 30 },
+  { nombre: "Maria", edad: 60 },
+  { nombre: "Ana", edad: 15}
+]
+
+objLisst.sort((a, b) => a.edad - b.edad) 
+
+console.log(objLisst) 
+
+//Comparar listas 
+//.every()
+
+const arrOne = [1,2,3,4,5,6,7,8,9]
+const arrTwo = [1,2,3,4,5,6,7,8,9]
+
+console.log(arrOne == arrTwo);
