@@ -367,3 +367,51 @@ const arrOne = [1,2,3,4,5,6,7,8,9]
 const arrTwo = [1,2,3,4,5,6,7,8,9]
 
 console.log(arrOne == arrTwo);
+
+//Sets o conuntos --Permite no almacenar datos duplicados 
+
+const arreglo = new Set([1,2,3,4,5,6,7,8,1,2,3])
+
+console.log(arreglo);
+
+//Conocer si el set contiene el dato 
+console.log(arreglo.has(9));
+
+//conocer el tamano del set, es una propiedad (valores unicos)
+console.log(arreglo.size);
+
+arreglo.forEach((valor)=>{
+  console.log(valor)
+});
+
+//factor de propagacion 
+console.log(...arreglo)
+
+
+//Objetos 
+
+
+
+//Fechas
+
+
+const fecha = new Date();
+console.log(fecha);
+
+const fecha3 = new Date(2023, 1, 15);
+console.log(fecha3);
+
+const fecha2 = new Date();
+
+console.log(fecha == fecha2); //No se puede comparar fechas de esta manera
+
+console.log(fecha.getDate() == fecha2.getDate()) //Forma correcta de comparar fehcas
+
+console.log(fecha.getDay(), fecha.getMonth(), fecha.getFullYear()) // Obtener el dia el mes y el anio
+
+console.log(fecha.toLocaleTimeString()); // Hobtener la hora local
+
+console.log(fecha.toLocaleDateString()) //Obtener la fecha actual el formato string local
+
+console.log(fecha.toLocaleDateString('en-US')) //Obtener la fecha actual el formato string US
+

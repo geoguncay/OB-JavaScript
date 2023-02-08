@@ -10,7 +10,6 @@ listB.pop(listB.length)
 
 
 // - Una lista de tus 3 películas favoritas (objetos con propiedades: titulo, director, fecha)
-//favorite movies list?
 let favoriteMovies = [
   {  titulo: 'Toy Story', director: 'John Lasseter', fecha: '1995'},
   {  titulo: 'Joker', director: 'Todd Phillips', fecha: '2019'},
